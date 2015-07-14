@@ -5,7 +5,7 @@
  */
 var TabsApp=angular.module('TabsApp', [ ])
 TabsApp.controller('TabsCtrl', ['$scope', function ($scope) {
-    $scope.tabs = [{
+    $scope.tabs = [{title: 'Home',url: 'GroupsDisplay.html'},{
             title: 'Manage Members',
             url: ''
         }, {
@@ -14,12 +14,13 @@ TabsApp.controller('TabsCtrl', ['$scope', function ($scope) {
         }, {
             title: 'Map View',
             url: 'mapView.html'
-    },{title: 'Meassages',url: ''},{title: 'Contact',url: ''}];
+    },{title: 'Meassages',url: 'testMessage.html'}];
 
-    $scope.currentTab = 'mapView.html';
+    $scope.currentTab = 'GroupsDisplay.html';
 
     $scope.onClickTab = function (tab) {
         $scope.currentTab = tab.url;
+
     }
     
     $scope.isActiveTab = function(tabUrl) {
