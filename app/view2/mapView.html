@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="TabsApp">
+    <head>
+        <title>Maps</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!--          <script src="maps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC3EVBOCXO6UgeH83z2lb04_DsalxQzR8g&sensor=false"></script>-->
+      
+    </head>
+    <style>
+        #maps{
+            height:75%;
+            width: 80%;
+            border:2px solid blue;        
+        }
+    </style>
+    
+    <body class="table-responsive" style="margin-left: 1%;"  ng-controller="newcontroller">
+    <div class="row">
+        <div class="col-md-2">
+            <h3 style="color:green"><b>Data Dictionary</b></h3>
+
+            <table border="1"   style="width:100%;" class="table table-striped">
+                <tr>
+                    <th>COLOR</td>
+                    <th>HAZARD TYPE</td>
+                </tr>
+                <tr >
+                    <td ><b style="color:orange">Orange</b></td>
+                    <td>Gas leaks</td>
+                </tr>
+                <tr>
+                    <td><b style="color:red">Red</b></td>
+                    <td>Fire</td></tr>
+                <tr>
+                    <td><b style='color:black'>Black</b> </td>
+                    <td> Remains</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="col-md-18"><mapsdemo class="container" id="maps"></mapsdemo></div>
+    </div>
+    </body>
+</html>
