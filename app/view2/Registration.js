@@ -27,7 +27,7 @@ reg.controller('MyCtrl1', ['$scope', function ($scope) {
             else if($scope.formInfo.Password!==$scope.formInfo.Password1){
                 $scope.error='Passwords do not match';
             }
-             else if (!$scope.formInfo.hnum) {
+             else if (!$scope.formInfo.Phnum) {
                 $scope.error='PhoneNumber required';
             }
            else if ($scope.formInfo.Name && $scope.formInfo.Email && $scope.formInfo.Password && $scope.formInfo.Phnum && ($scope.formInfo.Password===$scope.formInfo.Password1)) {

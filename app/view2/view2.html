@@ -18,13 +18,13 @@
 </head>
 
 <body>
-<div style="background-color: #007069;height: 7%" >
-  <nav class="navbar navbar-fixed-top" style="background-color: #0ddd63" role="navigation">
-    <div class="container">
+<div style="height: 5%" >
+  <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
 
-        <a class="navbar-brand" href="#" style='margin-right:15%;'>
+        <a class="navbar-brand" href="#" style='margin-right:5%;'>
           <img src="CERT_icon_1.jpg" width="200" height="35"/>
         </a>
       </div>
@@ -46,16 +46,16 @@
         </ul>
       </div>
       <!-- /.navbar-collapse -->
-    </div>
+
     <!-- /.container -->
   </nav>
 </div>
 <div  ng-controller="TabsCtrl"  >
 
   <div class="tab-content">
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" ng-repeat="tab in tabs"> <a
-              ng-class="{active:isActiveTab(tab.url)}"
+    <ul class="nav nav-pills nav-justified" role="tablist">
+      <li role="presentation" ng-repeat="tab in tabs"   ng-class="{active: isActiveTab(tab.url)}"> <a
+
               ng-click="onClickTab(tab)" >{{tab.title}}</a></li>
     </ul>
 

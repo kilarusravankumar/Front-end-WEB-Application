@@ -16,18 +16,18 @@ and open the template in the editor.
 
 
 
-    <script src="Registration.js" type="text/javascript"></script>
+    <script src="login.js" type="text/javascript"></script>
 </head>
 
 <body>
     
-   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
-
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                
-                <a class="navbar-brand" href="view2.html" >
-                    <img src="CERT_icon_1.jpg" width="100%" height="100%" alt="CERT_icon_1"/>
+                <a class="navbar-brand" href="#" style='margin-right:20%;'>
+                    <img src="CERT_icon_1.jpg" width="108" height="30" alt="CERT_icon_1"/>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,71 +42,57 @@ and open the template in the editor.
                     <li>
                         <a href="#">Contact</a>
                     </li>
-                    <li>
-                        <a href="view2.html">Login</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-
+        </div>
         <!-- /.container -->
     </nav>
     <div class='row' style='margin-top:10%'>
         <div class='container' style='display:flex;'>
-    <div class="jumbotron text-center col-md-8" >
+    <div class="jumbotron text-center col-md-6" >
     <h1 class="text-success">C.E.R.T</h1> 
     <p class="text-success">Community Emergency Response Team.</p> 
-    <img src="CERT.jpg" width="100%" height="100%" alt="CERT"/>
+    <img src="CERT.jpg" width="500" height="300" alt="CERT"/>
 
   </div>
-     <div class="jumbotron text-center col-md-8" >
+     <div class="jumbotron text-center col-md-6" >
     <div  style='margin-top:10%;'>
-        <p>  <h3 class='text-primary'>Registration</h3>
-    <form class="form-horizontal" role="form" ng-controller="MyCtrl1">
-        <div class="form-group">
-            <label for="inputName3" class="col-sm-6 control-label">Name</label>
-            <div class="col-sm-6">
-                <input class="form-control" id="inputName3" placeholder="Name" ng-model="formInfo.Name">
+        <p>  <h3 class='text-primary'>Login</h3>
+        <p>
+            
+        </p>
                 
             
                 </div>
-        </div>
+        
+             <form class="form-horizontal" role="form" ng-controller="loginContrl">
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-6 control-label">Email</label>
             <div class="col-sm-6">
-                <input  type='email' class="form-control" id="inputEmail3" placeholder="Email" ng-model="formInfo.Email">
+                <input  type='email' class="form-control" id="inputEmail3" placeholder="Email" ng-model="loginForm.Email">
               
 
             </div>
         </div>
         <div class="form-group">
-            <label  class="col-sm-6 control-label">Password</label>
+            <label for="inputPassword3" class="col-sm-6 control-label">Password</label>
             <div class="col-sm-6">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="formInfo.Password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="loginForm.Password">
                
 
             </div>
         </div>
-        <div class="form-group">
-            <label  class="col-sm-6 control-label">Retype Password</label>
-            <div class="col-sm-6">
-                <input type="password" class="form-control" id="inputPassword" placeholder=" Re-enter Password" ng-model="formInfo.Password1">
-            </div>
-        </div>
-        <div class="form-group">
-            <label  class="col-sm-6 control-label">Phone Number</label>
-            <div class="col-sm-6">
-                <input type="tel" class="form-control"  placeholder="5175801856" ng-model="formInfo.Phnum" pattern="^\d{10}$">
-                </div>
-        </div>
+       
+       
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <div class='container'>
-                <button type="submit" ng-click="saveData()" class="btn btn-success">Sign up</button>
-                <span  ng-show='regSuccess' class='text-success'>
+                <button type="submit" ng-click="loginClick()" class="btn btn-success">Sign In</button>
+                  <span  ng-show='regSuccess' class='text-success'>
                    
                     <strong>{{regSuccess}} </strong>
-                    <a href='login.html'><input type='button' class="btn btn-success" value='Sign IN'></a>
+                   
                 </span> 
                  <div  class='text-danger' ng-show="error" style='margin-right:3%;'>
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -121,9 +107,8 @@ and open the template in the editor.
            
     </div>
   </div>
-    </div>
-    </div>
+   
     
-    
+    </div>
 </body>
 </html>
