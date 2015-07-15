@@ -1,8 +1,9 @@
 TabsApp.directive('directive',function(){
     return {
     restrict:'E',
-        template:'<div class="row"><div class="col-md-2" style="height: 85%;overflow: auto">'+
-                '<input type="text" ng-model="search"><br><br>'+
+        template:'<div class="row" style="margin-left: 3%"><div class="col-md-2" style="height: 85%;overflow: auto">'+
+            '<br><br>'+
+                '<input type="text" placeholder="search" ng-model="search"><br><br>'+
           '<table class="table-bordered" style="width:100%;alignment-adjust: central">'+
 	'<tr ng-repeat="item in groups | filter:search " ng-switch on="$index % 1" >'+
      
