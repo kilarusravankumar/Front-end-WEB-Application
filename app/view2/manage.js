@@ -7,6 +7,7 @@ TabsApp.directive('manage',function(){
     return {
     restrict:'E',
         template:'<div >'+'<div>'+
+            '<input type="checkbox" ng-click="checkall()" ng-model="selected"> select all'+
 '<table class="table table-striped table-bordered">'+
   ' <tr>'+
    '<th class="text-center">User Name</th>'+
@@ -17,9 +18,9 @@ TabsApp.directive('manage',function(){
     '<td class="text-center">{{ x.username }}</td>'+
     '<td class="text-center">{{ x.phone }}</td>'+
     '<td class="text-center">{{ x.location }}</td>'+
-    '<td align="center"><input type="checkbox" ng-click="push(x)"></td>'+
+    '<td align="center"><input type="checkbox" ng-checked="selected" ng-click="push(x)">'+'</td>'+
   '</tr>'+
-'</table>'+'</div>' +'<button type="button" onclick="alert()" class="btn-success btn-lg">Add User</button>'+
+'</table>'+'</div>'+'&nbsp' +'<button type="button" onclick="alert()" class="btn-success btn-lg">Add User</button>'+'&nbsp;'+
         '<button type="button" ng-click="delete(arr)" class="btn-danger btn-lg" >Delete User</button>'+'</div>',
         replace:true,
         transclude:true,
@@ -33,6 +34,12 @@ TabsApp.directive('manage',function(){
     $scope.arr=[];
     $scope.push=function(x)
     {
+        var idx=$scope.arr.indexOf(x
+        );
+        if(idx>-1
+        )
+        $scope.arr.splice(idx,1);
+        else
         $scope.arr.push(x);
     };
     $scope.delete=function(arr){
@@ -43,6 +50,12 @@ TabsApp.directive('manage',function(){
           $scope.arr=[];
          }
     };
+           $scope.checkall=function(){
+               for(var i=0;i<$scope.names.length;i++){
+                   $scope.arr.push($scope.names[i]);
+               }
+
+           }
 }
     };
 });

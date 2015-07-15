@@ -24,8 +24,8 @@ var imageicon="images.png";
      var image = {
     blue:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
     black:"http://labs.google.com/ridefinder/images/mm_20_black.png",
-    white:"http://labs.google.com/ridefinder/images/mm_20_white.png",
-    yellow:"http://labs.google.com/ridefinder/images/mm_20_yellow.png"
+    white:"http://labs.google.com/ridefinder/images/mm_20_red.png",
+    yellow:"http://labs.google.com/ridefinder/images/mm_20_red.png"
     
   };
     var map=new google.maps.Map(document.getElementById(attrs.id),options);

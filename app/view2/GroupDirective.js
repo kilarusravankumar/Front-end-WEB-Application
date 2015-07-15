@@ -9,14 +9,14 @@ TabsApp.directive('directive',function(){
         '<span ng-show="groups[$index]">'+
             '<td ng-switch-when="0">'+
                  ' <a href="" ><div class="panel text-center" ng-click="add(groups[$index])" focus>'+
-                           ' <img class="circle" src="{{item.image}}" style="width:100%;height: 100%"/>'+
+                           ' <img class="circle" src="{{item.image}}" style="width:100%"/>'+
                             '<h4 class="ellipsis">Group Leader:{{item.name}}</h4>'+
                             '<h4 class="ellipsis">Members:{{item.name2}}</h4>'+
                         '</div></a>'+
             '</td>'+
         '</span>'+
 	'</tr>'+
-'</table>'+'</div><div class="col-md-10" style="background-color: #fbeed5;height: 85%;im" ></div></div>'
+'</table>'+'</div><div ng-show="hide" ng-click="hide=!hide" class="col-md-10" style="background-color: lightgreen;height: 85%;im" >{{groupsdetail.name}}{{groupsdetail.name2}}<img ng-src="{{groupsdetail.image}}" width="25%"></div></div>'
 ,
         replace:true,
         transclude:true,
@@ -28,7 +28,7 @@ TabsApp.directive('directive',function(){
 $scope.groups = groups; 
 $scope.add=function(groups){
  $scope.groupsdetail=groups;  
- $scope.Hide=true;
+ $scope.hide=true;
 };
 }
     };
