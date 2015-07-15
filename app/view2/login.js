@@ -14,8 +14,10 @@ login.controller('loginContrl', ['$scope', function ($scope) {
                 $scope.error = 'Password Required';
             }else if ($scope.loginForm.Email && $scope.loginForm.Password ) {
                 $scope.regSuccess = 'Log In Successful';
+                $location.path( "view2.html" );
               
 
             }
         };
 }]);
+//

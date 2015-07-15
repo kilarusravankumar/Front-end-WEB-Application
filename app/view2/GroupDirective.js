@@ -16,7 +16,7 @@ TabsApp.directive('directive',function(){
             '</td>'+
         '</span>'+
 	'</tr>'+
-'</table>'+'</div><div ng-show="hide" ng-click="hide=!hide" class="col-md-10" style="background-color: lightgreen;height: 85%;im" >{{groupsdetail.name}}{{groupsdetail.name2}}<img ng-src="{{groupsdetail.image}}" width="25%"></div></div>'
+'</table>'+'</div><div ng-show="hide" ng-click="hide=!hide" class="col-md-10" style="background-color: lightgreen;height: 85%;im" ><img ng-src="{{groupsdetail.image}}" width="25%"> {{groupsdetail.name}}{{groupsdetail.name2}}</div></div>'
 ,
         replace:true,
         transclude:true,
