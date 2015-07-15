@@ -50,14 +50,19 @@ TabsApp.directive('manage',function(){
           $scope.arr=[];
          }
     };
-           $scope.checkall=function(){
-               for(var i=0;i<$scope.names.length;i++){
-                   $scope.arr.push($scope.names[i]);
+           $scope.checkall=function() {
+               if ($scope.selected) {
+                   for (var i = 0; i < $scope.names.length; i++) {
+                       $scope.arr.push($scope.names[i]);
+                   }
                }
-
+               else{
+                   $scope.arr=[];
+               }
            }
 }
     };
+
 });
 
 
