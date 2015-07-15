@@ -9,9 +9,9 @@ TabsApp.directive('directive',function(){
         '<span ng-show="groups[$index]">'+
             '<td ng-switch-when="0">'+
                  ' <a href="" ><div class="panel text-center" ng-click="add(groups[$index])" focus>'+
-                           ' <img class="circle" src="{{groups[$index].image}}" style="width:100%;height: 100%"/>'+
-                            '<h4 class="ellipsis">Group Leader:{{groups[$index].name}}</h4>'+
-                            '<h4 class="ellipsis">Members:{{groups[$index].name2}}</h4>'+
+                           ' <img class="circle" src="{{item.image}}" style="width:100%;height: 100%"/>'+
+                            '<h4 class="ellipsis">Group Leader:{{item.name}}</h4>'+
+                            '<h4 class="ellipsis">Members:{{item.name2}}</h4>'+
                         '</div></a>'+
             '</td>'+
         '</span>'+

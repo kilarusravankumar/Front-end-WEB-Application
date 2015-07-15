@@ -100,6 +100,12 @@ and open the template in the editor.
                 </div>
         </div>
         <div class="form-group">
+            <label  class="col-sm-6 control-label">Phone Number</label>
+            <div class="col-sm-6">
+                <input type="tel" class="form-control"  placeholder="5175801856" ng-model="formInfo.Phnum" pattern="^\d{10}$">
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <div class='container'>
                 <button type="submit" ng-click="saveData()" class="btn btn-success">Sign up</button>

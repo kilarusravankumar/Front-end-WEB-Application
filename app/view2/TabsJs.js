@@ -7,7 +7,7 @@ var TabsApp=angular.module('TabsApp', [ ])
 TabsApp.controller('TabsCtrl', ['$scope', function ($scope) {
     $scope.tabs = [{title: 'Home',url: 'GroupsDisplay.html'},{
             title: 'Manage Members',
-            url: ''
+            url: 'manageUsers.html'
         }, {
             title: 'Manage Groups',
             url: 'GroupsDisplay.html'
