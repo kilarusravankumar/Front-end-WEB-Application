@@ -6,7 +6,7 @@
 TabsApp.directive('manage',function(){
     return {
     restrict:'E',
-        template:'<div >'+'<div>'+
+        template:'<div style="margin-left: 1%" >'+'<div>'+
             '<input type="checkbox" ng-click="checkall()" ng-model="selected"> select all'+
 '<table class="table table-striped table-bordered">'+
   ' <tr>'+
