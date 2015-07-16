@@ -10,7 +10,7 @@ TabsApp.controller('TabsCtrl', ['$scope', function ($scope) {
             url: 'manageUsers.html'
         }, {
             title: 'Manage Groups',
-            url: 'GroupsDisplay.html'
+            url: ''
         }, {
             title: 'Map View',
             url: 'mapView.html'
