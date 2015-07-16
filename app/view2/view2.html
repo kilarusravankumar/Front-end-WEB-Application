@@ -8,7 +8,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC3EVBOCXO6UgeH83z2lb04_DsalxQzR8g&sensor=false"></script>
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
   <script src="TabsJs.js"></script>
   <script src="maps.js"></script>
   <script src="GroupDirective.js"></script>
@@ -59,7 +58,7 @@
     <ul class="nav nav-pills nav-justified" role="tablist">
       <li role="presentation" ng-repeat="tab in tabs"   ng-class="{active: isActiveTab(tab.url)}"> <a
 
-              ng-click="onClickTab(tab)" style="font-size: 100%" >{{tab.title}}</a></li>
+              ng-click="onClickTab(tab)" >{{tab.title}}</a></li>
     </ul>
 
   </div>
