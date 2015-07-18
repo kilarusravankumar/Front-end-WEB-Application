@@ -1,9 +1,9 @@
-/* 
+;/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var TabsApp=angular.module('TabsApp', [ ])
+var TabsApp=angular.module('TabsApp', [ 'ui.bootstrap']);
 TabsApp.controller('TabsCtrl', ['$scope', function ($scope) {
     $scope.tabs = [{title: 'Home',url: 'GroupsDisplay.html'},{
             title: 'Manage Members',

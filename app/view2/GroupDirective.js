@@ -16,23 +16,45 @@ TabsApp.directive('directive',function(){
             '</td>'+
         '</span>'+
 	'</tr>'+
-'</table>'+'</div><div ng-show="hide" ng-click="hide=!hide" class="col-md-10" style="height: 85%;im" ><img ng-src="{{groupsdetail.image}}" width="25%"> {{groupsdetail.name}}{{groupsdetail.name2}}</div></div>'
+'</table>'
 ,
         replace:true,
         transclude:true,
-       controller:function($scope){
-    var groups=[{name:"trilok",name2:"7",image:'noPicPhoto.jpg'},{name:"sravan",name2:"6",image:'noPicPhoto.jpg'},
-        {name:"challa",name2:"6",image:'noPicPhoto.jpg'},{name:"Satya",name2:"4",image:'noPicPhoto.jpg'},{name:"Harry",name2:"6",image:'noPicPhoto.jpg'}
-       ];
+        controller:function($scope,$modal){
+            var groups=[{name:"trilok",name2:"7",image:'noPicPhoto.jpg'},{name:"sravan",name2:"6",image:'noPicPhoto.jpg'},
+                {name:"challa",name2:"6",image:'noPicPhoto.jpg'},{name:"Satya",name2:"4",image:'noPicPhoto.jpg'},{name:"Harry",name2:"6",image:'noPicPhoto.jpg'}
+            ];
 
-$scope.groups = groups; 
-$scope.add=function(groups){
- $scope.groupsdetail=groups;  
- $scope.hide=true;
-};
-}
+            $scope.groups = groups;
+            $scope.add=function(groups){
+                var modalInstance = $modal.open({
+                    animation: true,
+                    template: '<div>{{groupsdetail.name}} <img ng-src="{{groupsdetail.image}}"> <input type="button" ng-click="ok()"></div>',
+                    controller: 'ModalInstanceCtrl',
+                    size: 'lg',
+                    resolve: {
+                        items: function () {
+                            return groups;
+                        }
+                    }
+                });
+            };
+        }
     };
 });
+TabsApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance,items) {
+
+    $scope.groupsdetail = items;
+
+    $scope.ok = function () {
+        $modalInstance.close();
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+});
+
 
 
 
