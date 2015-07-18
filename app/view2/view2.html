@@ -8,7 +8,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC3EVBOCXO6UgeH83z2lb04_DsalxQzR8g&sensor=false"></script>
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Inknut+Antiqua:400,600,500' rel='stylesheet' type='text/css'>
   <script src="TabsJs.js"></script>
   <script src="maps.js"></script>
   <script src="GroupDirective.js"></script>
@@ -19,33 +19,38 @@
 
 </head>
 <body >
-<div>
+<div >
 
 <div  >
-  <nav class="navbar navbar-default navbar-fixed-top" style="height: 1%" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top"  role="navigation" >
 
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
 
-        <a class="navbar-brand" href="#">
-          <img src="CERT_icon_1.jpg" width="200" height="27"/>
+        <a class="navbar-brand glyphicon glyphicon-home" href="#">
+
         </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li>
+          <li >
             <a href="#">About</a>
           </li>
-          <li>
+          <li >
             <a href="#">Services</a>
           </li>
-          <li>
+          <li >
             <a href="#">Contact</a>
           </li>
-          <li>
+          <li >
             <a href="registration.html">Log Out</a>
           </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 2%">
+          <li><a style="font-family: 'Inknut Antiqua',serif;">C.E.R.T</a></li>
+
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -53,9 +58,9 @@
     <!-- /.container -->
   </nav>
 </div>
-<div  ng-controller="TabsCtrl" style="margin-top: 3%" class="row" >
+<div  ng-controller="TabsCtrl" style="margin-top: 3%;width: 85%;margin-left: 8%" >
 
-  <div class="tab-content">
+  <div class="tab-content" style="background-color: whitesmoke">
     <ul class="nav nav-pills nav-justified" role="tablist">
       <li role="presentation" ng-repeat="tab in tabs"   ng-class="{active: isActiveTab(tab.url)}"> <a
 
@@ -63,7 +68,7 @@
     </ul>
 
   </div>
-  <div id="mainView">
+  <div id="mainView" >
     <div ng-include="currentTab"></div>
   </div>
 </div>
