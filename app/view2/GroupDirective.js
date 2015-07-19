@@ -2,13 +2,13 @@ TabsApp.directive('directive',function(){
     return {
     restrict:'E',
         template:'<div class="row" ><div class="col-md-2" style="height: 85%;overflow: auto">'+
-                '<input type="text" ng-model="search" placeholder="search"><br><br>'+
+                '<input type="text" ng-model="search.name" placeholder="search"><br><br>'+
           '<table class="table-bordered" style="width:100%;alignment-adjust: central">'+
     '<tr ng-repeat="groups in groupsColumn">'+
 
 
 
-        '<td ng-repeat="item in groups | filter:query">'+
+        '<td ng-repeat="item in groups | filter:search">'+
         '<a href="#/dialog">   <div class="panel text-center" ng-click="add(item)">'+
         '<img class="circle" src="{{item.image}}"style="width:100px;height: 100px"/>'+
         '<h4 class="ellipsis">Group Leader:{{item.name}}</h4>'+
