@@ -4,19 +4,18 @@
 TabsApp.directive("display",function() {
     return {
         restrict: 'E',
-        template: '<div class="container">' +
+        template:   '<div class="container">' +
         '<form class="form-horizontal">' +
         '<div class="form-group">' +
 
 
         '<textarea class="form-control" placeholder="Write your message"  rows="6" required></textarea>' +
         '<input type="file" class="form-control">' +
-        '<button type="button" class="btn btn-success btn-lg btn-block">Broadcast</button>' +
+        '<button type="button" class="btn btn-success btn-lg btn-block" ng-click="allTeam()">Broadcast</button>' +
 
-        '<button type="button" class="btn btn-primary btn-lg btn-block">Send to each team</button>' +
+        '<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="displayAlert()">Send to each team</button>' +
 
-        '<label for="available groups" name="available groups"> Available Groups </label>' +
-        '<div id="available groups">' +
+
         '<input type="text" ng-model="query.name">' +
         ' <table border="1" class="table table-striped table-responsive">' +
         '<tr ng-repeat="groups in groupsColumn">' +
@@ -28,7 +27,7 @@ TabsApp.directive("display",function() {
         '<input type="checkbox" ng-click="message(item,check)" ng-model="check">' +
         '<img class="circle" src="{{item.image}} "style="width:100px;height: 100px"/>'+
         ' <h4 class="ellipsis">Group Leader:{{item.name}}</h4>'+
-            '<h4 class="ellipsis">Members:{{item.name2}}</h4>' +
+        '<h4 class="ellipsis">Members:{{item.name2}}</h4>' +
 
 
         '</div>'+
@@ -39,17 +38,18 @@ TabsApp.directive("display",function() {
         '</tr>' +
         '</table>' +
 
-        '<input type="button" ng-click="displayAlert() value="send">' +
 
         '</div>' +
 
-        '</div>' +
+
         '</form>' +
-
         '</div>',
         replace: true,
         transclude: true,
         controller: function ($scope) {
+            var alertName;
+            var original=[];
+            var count=0;
             var groups = [{name: "trilok", name2: "7", image: 'noPicPhoto.jpg'}, {
                 name: "sravan",
                 name2: "6",
@@ -75,6 +75,9 @@ TabsApp.directive("display",function() {
                 }
                 return rowsArray;
             }
+            $scope.allTeam=function(){
+                window.alert("message sent successful to all the members");
+            };
 
             $scope.message = function (item, check) {
                 if (check) {
