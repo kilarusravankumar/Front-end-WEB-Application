@@ -14,7 +14,8 @@ TabsApp.controller('TabsCtrl', ['$scope', function ($scope) {
         }, {
             title: 'Map View',
             url: 'mapView.html'
-    },{title: 'Meassages',url: 'alerts.html'}];
+    },
+        {title: 'Messages',url: 'Message.html'}];
 
     $scope.currentTab = 'GroupsDisplay.html';
 
