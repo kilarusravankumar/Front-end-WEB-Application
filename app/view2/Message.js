@@ -13,19 +13,19 @@ TabsApp.directive("display",function() {
         '<input type="file" class="form-control">' +
         '<button type="button" class="btn btn-success btn-lg btn-block" ng-click="allTeam()">Broadcast</button>' +
 
-        '<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="displayAlert()">Send to each team</button>' +
+        '<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="displayAlert()">Send to each team</button>' +'</form>' +
+        '</div>'+
 
-
-        '<input type="text" ng-model="query.name">' +
-        ' <table border="1" class="table table-striped table-responsive">' +
+'<div>'+'<div class="input-group">'+'<span class="input-group-addon">'+'<span class="glyphicon glyphicon-search">'+'</span>'+'</span>'+
+        '<input type="text" ng-model="query.name" class="form-control" placeholder="Search group">' +'</div>'+'<div>'+'<p>'+'</p>'+
+        ' <table border="1" class="table-responsive table-striped ">' +
         '<tr ng-repeat="groups in groupsColumn">' +
 
 
-        '<td ng-repeat="item in groups | filter:query">' +
-        '<a href="#">'
-        +'<div class="panel text-center">' +
-        '<input type="checkbox" ng-click="message(item,check)" ng-model="check">' +
-        '<img class="circle" src="{{item.image}} "style="width:100px;height: 100px"/>'+
+        '<td ng-repeat="item in groups | filter:query">'
+        +'<div class="panel text-center">' +'<div class="checkbox" style="margin-right: 85%">'+
+        '<input type="checkbox" ng-click="message(item,check)" ng-model="check" style="width: 100%;height: 100%">' +'</div>'+
+        '<img class="circle" src="{{item.image}} "style="width:25%;height: 20%"/>'+
         ' <h4 class="ellipsis">Group Leader:{{item.name}}</h4>'+
         '<h4 class="ellipsis">Members:{{item.name2}}</h4>' +
 
@@ -36,32 +36,31 @@ TabsApp.directive("display",function() {
         '</td>' +
 
         '</tr>' +
-        '</table>' +
+        '</table>' +'</div>'+
 
 
-        '</div>' +
+        '</div>' ,
 
 
-        '</form>' +
-        '</div>',
+
         replace: true,
         transclude: true,
         controller: function ($scope) {
             var alertName;
             var original=[];
             var count=0;
-            var groups = [{name: "trilok", name2: "7", image: 'noPicPhoto.jpg'}, {
-                name: "sravan",
+            var groups = [{name: "team leader 1", name2: "7", image: 'noPicPhoto.jpg'}, {
+                name: "team leader 2",
                 name2: "6",
                 image: 'noPicPhoto.jpg'
             },
-                {name: "challa", name2: "6", image: 'noPicPhoto.jpg'}, {
-                    name: "trilok",
+                {name: "team leader 3", name2: "6", image: 'noPicPhoto.jpg'}, {
+                    name: "team leader 4",
                     name2: "7",
                     image: 'noPicPhoto.jpg'
-                }, {name: "sravan", name2: "6", image: 'noPicPhoto.jpg'}, {name: "yasaswini", name2: "6", image: 'noPicPhoto.jpg'}
-                , {name: "yasaswini", name2: "6", image: 'noPicPhoto.jpg'}, {
-                    name: "yasaswini",
+                }, {name: "team leader 5", name2: "6", image: 'noPicPhoto.jpg'}, {name: "team leader 6", name2: "6", image: 'noPicPhoto.jpg'}
+                , {name: "team leader 7", name2: "6", image: 'noPicPhoto.jpg'}, {
+                    name: "team leader 8",
                     name2: "6",
                     image: 'noPicPhoto.jpg'
                 }];

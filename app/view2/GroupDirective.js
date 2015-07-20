@@ -1,8 +1,9 @@
 TabsApp.directive('directive',function(){
     return {
     restrict:'E',
-        template:'<div class="row" ><div class="col-md-2" style="height: 85%;overflow: auto">'+
-                '<input type="text" ng-model="search.name" placeholder="search"><br><br>'+
+        template:'<div class="row" ><div >'+
+        '<div class="input-group">'+'<span class="input-group-addon">'+'<span class="glyphicon glyphicon-search">'+'</span>'+'</span>'+
+        '<input type="text" ng-model="search.name" class="form-control" placeholder="Search group">' +'</div>'+'<p>'+'</p>'+
           '<table class="table-bordered" style="width:100%;alignment-adjust: central">'+
     '<tr ng-repeat="groups in groupsColumn">'+
 
@@ -10,7 +11,7 @@ TabsApp.directive('directive',function(){
 
         '<td ng-repeat="item in groups | filter:search">'+
         '<a href="#/dialog">   <div class="panel text-center" ng-click="add(item)">'+
-        '<img class="circle" src="{{item.image}}"style="width:100px;height: 100px"/>'+
+        '<img class="circle" src="{{item.image}}"style="width:20%;height: 20%"/>'+
         '<h4 class="ellipsis">Group Leader:{{item.name}}</h4>'+
     '<h4 class="ellipsis">Members:{{item.name2}}</h4>'+
    ' </div></a>'+
@@ -22,8 +23,8 @@ TabsApp.directive('directive',function(){
         replace:true,
         transclude:true,
         controller:function($scope,$modal){
-            var groups=[{name:"trilok",name2:"7",image:'noPicPhoto.jpg'},{name:"sravan",name2:"6",image:'noPicPhoto.jpg'},
-                {name:"Harry",name2:"6",image:'noPicPhoto.jpg'},{name:"Henry",name2:"6",image:'noPicPhoto.jpg'},{name:"challa",name2:"6",image:'noPicPhoto.jpg'},{name:"Satya",name2:"4",image:'noPicPhoto.jpg'},{name:"Harry",name2:"6",image:'noPicPhoto.jpg'}
+            var groups=[{name:"team leader 1",name2:"7",image:'noPicPhoto.jpg'},{name:"team leader 2",name2:"6",image:'noPicPhoto.jpg'},
+                {name:"team leader 3",name2:"6",image:'noPicPhoto.jpg'},{name:"team leader 4",name2:"6",image:'noPicPhoto.jpg'},{name:"team leader 5",name2:"6",image:'noPicPhoto.jpg'},{name:"team leader 6",name2:"4",image:'noPicPhoto.jpg'},{name:"team leader 7",name2:"6",image:'noPicPhoto.jpg'}
             ];
 
             $scope.groupsColumn = part(groups, 3);
